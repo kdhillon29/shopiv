@@ -123,7 +123,6 @@
                 >About</NuxtLink
               >
             </li>
-            <li><ThemeToggle /></li>
           </ul>
         </div>
       </div>

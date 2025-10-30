@@ -1,0 +1,31 @@
+{
+  "name": "shopiverse",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "drizzle:seed": "tsx ./server/db/seed.ts"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.1.0",
+    "@nuxt/image": "^1.11.0",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.7",
+    "nuxt": "4.1.3",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
+    "tsx": "^4.20.6",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/supabase": "^2.0.1",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@types/pg": "^8.15.6",
+    "drizzle-kit": "^0.31.6"
+  }
+}

@@ -1,7 +1,7 @@
 <template>
   <div :id="`productcomp${product.id}`">
     <div
-      class="relative flex flex-col gap-2 px-1 h-[28rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      class="relative flex flex-col gap-2 px-1 h-[30rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
       <NuxtLink :to="`product-${product.id}`">
         <NuxtPicture
@@ -23,22 +23,22 @@
           {{ product.description }}
         </p>
       </NuxtLink>
-      <div class="flex items-center mt-1 dark:text-gray-400">
+      <div class="flex items-center my-3 pl-3 dark:text-gray-400">
         <h5 class="">Rating:</h5>
         <span class="text-xs font-semibold px-2.5 py-0.5 rounded">{{
           getRandomRating()
         }}</span>
       </div>
-      <div class="flex items-center justify-between gap-1 mt-1">
+      <div class="flex items-center justify-start gap-3 pl-3 my-3">
         <strong class="text-gray-600 dark:text-gray-200">Price:</strong>
-        <span class="text-sm md:text-md font-semibold dark:text-white"
-          >${{ product.price }}</span
-        >
-
         <span
           class="text-sm md:text-md font-semibold dark:text-white line-through"
           >${{ product.price * 2 }}</span
         >
+        <span class="text-sm md:text-md font-semibold dark:text-white"
+          >${{ product.price }}</span
+        >
+
         <br />
       </div>
       <button

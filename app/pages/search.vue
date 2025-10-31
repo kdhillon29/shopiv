@@ -30,6 +30,12 @@
           placeholder="Search for any product..."
           required
         />
+        <Icon
+          name="uil:cancel"
+          size="16"
+          class="absolute right-2 top-4 z-40 text-orange-500"
+          @click="searchInput = ''"
+        />
       </div>
       <button
         @click.prevent="execute"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="flex mt-6 p-3 items-center max-w-sm mx-auto">
+    <form class="flex mt-6 p-3 items-center max-w-sm md:max-w-xl mx-auto">
       <label for="simple-search" class="sr-only">Search</label>
       <div class="relative w-full">
         <div
@@ -26,7 +26,7 @@
           v-model="searchInput"
           type="text"
           id="simple-search"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block ps-10 p-3 px-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search for any product..."
           required
         />
@@ -39,7 +39,7 @@
       </div>
       <button
         @click.prevent="execute"
-        class="bg-orange-400 flex justify-center items-center gap-2 ml-3 p-2 px-4 rounded-full"
+        class="bg-orange-600 dark:bg-green-700 text-white flex justify-center items-center gap-2 ml-3 p-2 px-4 rounded-full"
       >
         <Icon name="uil:search" size="16" class="text-white" />
         Search

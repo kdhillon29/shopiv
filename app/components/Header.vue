@@ -7,5 +7,6 @@
 
 <script setup>
 const user = useSupabaseUser();
+console.log("user in Header:", user.value);
 // const user = false;
 </script>

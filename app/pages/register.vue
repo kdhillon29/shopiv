@@ -72,9 +72,9 @@
       <button
         type="submit"
         class="text-white bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-ring-800"
-        :class="{ pending: isPending }"
+        :class="{ isPending: isPending }"
       >
-        Submit
+        {{ pending ? "Submitting..." : "Submit" }}
       </button>
       <!-- Success Message -->
       <div v-if="successMsg">
@@ -115,6 +115,7 @@ if (user.value) {
 onMounted(() => {
   console.log("Register page mounted");
 });
+const isPending = ref(false);
 const signUp = async () => {
   console.log("Signing up with:", {
     email: email.value,
@@ -139,12 +140,14 @@ const signUp = async () => {
     errorMsg.value = error.message;
     return;
   }
-
+  if (pending) {
+    isPending.value = true;
+  }
   errorMsg.value = null;
   successMsg.value = "Redirecting...";
   setTimeout(async () => {
     successMsg.value = null;
-    await navigateTo("/");
+    await navigateTo("/confirm");
   }, 2000);
 };
 </script>

@@ -132,10 +132,11 @@
 
 <script setup>
 const user = useSupabaseUser();
-// import { initFlowbite } from "flowbite";
+console.log("user in UserNav:", user.value);
+import { initFlowbite } from "flowbite";
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-  //   initFlowbite();
+  initFlowbite();
 });
 </script>

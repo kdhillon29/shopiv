@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-amber-100 border-gray-200 dark:bg-gray-900">
+    <nav class="bg-rose-100 border-gray-200 dark:bg-gray-900">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -8,9 +8,9 @@
           to="/"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <Icon name="uil:shop" size="50" color="red" />
+          <Icon name="uil:shop" size="50" class="text-red-500"" />
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            class="self-center text-3xl font-semibold whitespace-nowrap text-orange-700 dark:text-green-400"
             >Shopiverse</span
           >
         </NuxtLink>
@@ -93,7 +93,7 @@
           id="navbar-user"
         >
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="flex flex-col gap-3 md:gap-6 justify-center items-center font-medium p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-slate-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
             <li>
               <NuxtLink
@@ -123,8 +123,7 @@
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 <Icon name="uil:shopping-cart" color="green" size="30" />
-                Cart</NuxtLink
-              >
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -135,10 +134,11 @@
 
 <script setup>
 const user = useSupabaseUser();
-// import { initFlowbite } from "flowbite";
+console.log("user in UserNav:", user);
+import { initFlowbite } from "flowbite";
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-  //   initFlowbite();
+  initFlowbite();
 });
 </script>

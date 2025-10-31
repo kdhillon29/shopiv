@@ -1,7 +1,11 @@
 <template>
-  <div :id="`productcomp${product.id}`">
+  <div
+    :id="`product${product.id}`"
+    :class="{ 'w-full flex justify-center': isSingle }"
+  >
     <div
       class="relative flex flex-col gap-2 px-1 h-[30rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      :class="{ 'h-auto w-full': isSingle }"
     >
       <NuxtLink :to="`product-${product.id}`">
         <NuxtPicture
@@ -19,7 +23,10 @@
         </h5>
       </NuxtLink>
       <NuxtLink :to="`product-${product.id}`">
-        <p class="mt-3 text-gray-500 dark:text-gray-400 text-sm line-clamp-2">
+        <p
+          class="mt-3 text-gray-500 dark:text-gray-400 text-sm line-clamp-2"
+          :class="{ isSingle: isSingle }"
+        >
           {{ product.description }}
         </p>
       </NuxtLink>
@@ -56,7 +63,7 @@
 </template>
 
 <script setup>
-defineProps(["product"]);
+defineProps(["product", "isSingle"]);
 
 const user = useSupabaseUser();
 const cart = useCart();
@@ -67,7 +74,7 @@ const alreadyInCart = (cartState, productToCheck) => {
 };
 
 const getRandomRating = () => {
-  return Math.floor(Math.random() * 5) + 1;
+  return (Math.floor(Math.random() * 5) + 1).toFixed(1);
 };
 
 const addToCart = (product) => {
@@ -79,3 +86,9 @@ const addToCart = (product) => {
   }
 };
 </script>
+
+<style scoped>
+.isSingle {
+  @apply line-clamp-none w-full text-center;
+}
+</style>

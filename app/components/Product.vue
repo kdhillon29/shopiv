@@ -43,7 +43,7 @@
       </div>
       <button
         @click="addToCart(product)"
-        class="flex items-center justify-center gap-3 text-white bg-orange-600 dark:bg-green-600 hover:bg-orange-800 mt-auto mb-3 w-[80%] mx-auto px-2 py-3 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm"
+        class="flex items-center justify-center gap-3 text-white bg-orange-400 dark:bg-green-600 hover:bg-orange-500 mt-auto mb-3 w-[80%] mx-auto px-2 py-3 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm"
       >
         <Icon name="uil:cart" size="20" class="text-white font-semibold" />
 

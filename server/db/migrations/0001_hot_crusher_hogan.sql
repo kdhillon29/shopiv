@@ -1,1 +1,0 @@
-ALTER TABLE "products_table" ALTER COLUMN "price" SET DATA TYPE numeric;

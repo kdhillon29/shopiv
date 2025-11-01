@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full">
     <Loading v-if="pending" />
     <SingleProduct v-else :product="product" />
   </div>

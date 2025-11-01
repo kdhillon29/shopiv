@@ -1,5 +1,5 @@
 {
-  "id": "f0f78f16-a541-4412-8b1a-751297e8d752",
+  "id": "a5befcb7-6ab1-4e03-965f-359b88996c6f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -10,7 +10,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "uuid",
           "primaryKey": true,
           "notNull": true
         },
@@ -40,7 +40,7 @@
         },
         "price": {
           "name": "price",
-          "type": "integer",
+          "type": "numeric",
           "primaryKey": false,
           "notNull": true
         },

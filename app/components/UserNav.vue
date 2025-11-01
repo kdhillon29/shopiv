@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-rose-100 border-gray-200 dark:bg-gray-900">
+    <nav class="bg-slate-200 border-gray-200 dark:bg-gray-900">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -126,6 +126,7 @@
               </NuxtLink>
             </li>
           </ul>
+          <div class="ml-3 md:ml-8"><ThemeToggle /></div>
         </div>
       </div>
     </nav>

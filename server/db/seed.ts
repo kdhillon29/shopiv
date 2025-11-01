@@ -11,6 +11,7 @@ const productsURL = "https://fakestoreapi.com/products";
 const productsData = (await $fetch(
   productsURL
 )) as (typeof products.$inferInsert)[];
+const seedData = productsData.map(({ id, ...rest }) => rest);
 
 const main = async () => {
   const client = new Pool({
@@ -23,7 +24,7 @@ const main = async () => {
     await client.connect();
     console.log("Database connected successfully");
     console.log("Seed start");
-    await db.insert(products).values(productsData);
+    await db.insert(products).values(seedData);
     console.log("Seed done");
   } catch (error) {
     console.error("Error connecting to the database:", error);

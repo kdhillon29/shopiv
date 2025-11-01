@@ -1,6 +1,10 @@
-import { decimal, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { decimal, pgTable, text, uuid, timestamp } from "drizzle-orm/pg-core";
+import crypto from "node:crypto";
+
 export const products = pgTable("products_table", {
-  id: serial("id").primaryKey(),
+  id: uuid("id")
+    .primaryKey()
+    .$default(() => crypto.randomUUID()),
   title: text("title").notNull(),
   description: text("description").notNull(),
   image: text("image").notNull(),

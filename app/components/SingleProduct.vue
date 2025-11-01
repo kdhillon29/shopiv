@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-2xl w-full flex justify-center mx-auto my-1 p-6">
+  <div class="max-w-3xl w-full flex justify-center mx-auto my-1 p-6">
     <div
       class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl"
     >
       <div class="relative">
         <div
-          class="absolute inset-0 bg-gradient-to-br from-purple-400 to-indigo-600 opacity-75"
+          class="absolute inset-0 bg-gradient-to-bl from-rose-600 to-indigo-600 opacity-75"
         ></div>
         <NuxtPicture
           :src="`${product.image}`"

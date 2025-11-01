@@ -42,3 +42,7 @@ logs
 /app/generated/prisma
 
 /app/generated/prisma
+server/db/migrations/meta/_journal.json
+server/db/migrations/0000_blushing_vanisher.sql
+server/db/migrations/meta/_journal.json
+server/db/migrations/meta/0000_snapshot.json

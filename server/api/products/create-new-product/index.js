@@ -1,4 +1,4 @@
-import { uuid } from "drizzle-orm/pg-core";
+// import { uuid } from "drizzle-orm/pg-core";
 import { db } from "../../../db/index";
 import {
   products,

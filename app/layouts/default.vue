@@ -8,4 +8,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const cart = useCart();
+
+onMounted(() => {
+  const localCart = JSON.parse(localStorage.getItem("cart"));
+  if (localCart) cart.value = localCart;
+});
+</script>

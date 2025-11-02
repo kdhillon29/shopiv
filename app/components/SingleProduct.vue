@@ -68,7 +68,7 @@ const user = useSupabaseUser();
 const cart = useCart();
 const alreadyInCart = (cartState, productToCheck) => {
   return cartState.some((productInCart) => {
-    return productInCart.id === productToCheck.id;
+    return productInCart.item.id === productToCheck.id;
   });
 };
 
@@ -79,7 +79,7 @@ const getRandomRating = () => {
 const addToCart = (product) => {
   console.log("Adding to cart:", product);
   if (user.value) {
-    cart.value.push(product);
+    cart.value.push({ quantity: 1, item: product });
   } else {
     alert("Log in to start adding products to cart");
   }

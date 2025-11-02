@@ -80,7 +80,9 @@ const getRandomRating = () => {
 const addToCart = (product) => {
   console.log("Adding to cart:", product);
   if (user.value) {
-    cart.value.push(product);
+    const cartItem = { quantity: 1, item: product };
+    cart.value.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart.value));
   } else {
     alert("Log in to start adding products to cart");
   }

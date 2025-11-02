@@ -62,13 +62,48 @@
       ></textarea>
 
       <div>
-        <label
-          class="inline text-sm font-medium text-gray-900 dark:text-white"
-          for="user_avatar"
-          >Upload a product image</label
-        >
-
-        <br />
+        <p class=" w-fullflex justify-around mb-1">
+          <label
+            class="inline text-xs font-medium text-gray-900 dark:text-white"
+            for="user_avatar"
+            >Upload Image:</label
+          >
+          <div class="inline-flex items-center justify-center w-full">
+            <hr
+              class="w-64 h-1 my-2 bg-gray-200 border-0 rounded dark:bg-gray-700"
+            />
+            <div
+              class="absolute flex px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900"
+            >
+              <svg
+                class="w-2 h-2 text-gray-700 dark:text-gray-300 rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 14"
+              >
+                <path
+                  d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+                />
+              </svg>
+              <span class="text-xs font-semibold text-zinc-700 dark:text-white"
+                >Good Image help you sell more</span
+              >
+              <svg
+                class="w-2 h-2 text-gray-700 dark:text-gray-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 14"
+              >
+                <path
+                  d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </p>
+        <!-- <br /> -->
         <!-- <br /> -->
         <div class="flex gap-1">
           <input
@@ -81,7 +116,7 @@
           <button
             @click="uploadImage"
             type="button"
-            class="text-white bg-gradient-to-br mt-1 from-rose-800 to-orange-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-rose-200 dark:focus:ring-rose-500 font-medium rounded-full text-sm px-2 py-1 text-center me-2"
+            class="text-white bg-gradient-to-br mt-1 from-teal-900 to-green-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-rose-200 dark:focus:ring-rose-500 font-medium rounded-full text-sm px-2 py-1 text-center me-2"
           >
             Upload
           </button>
@@ -106,41 +141,6 @@
         >
           <span class="font-medium">Oh, snapp! </span>{{ imageUploadErrorMsg }}
         </p>
-      </div>
-
-      <div class="inline-flex items-center justify-center w-full">
-        <hr
-          class="w-64 h-1 my-2 bg-gray-200 border-0 rounded dark:bg-gray-700"
-        />
-        <div
-          class="absolute flex px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900"
-        >
-          <svg
-            class="w-2 h-2 text-gray-700 dark:text-gray-300 rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 14"
-          >
-            <path
-              d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
-            />
-          </svg>
-          <span class="text-xs font-semibold text-zinc-700 dark:text-white"
-            >Good Image help you sell more</span
-          >
-          <svg
-            class="w-2 h-2 text-gray-700 dark:text-gray-300"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 14"
-          >
-            <path
-              d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
-            />
-          </svg>
-        </div>
       </div>
 
       <div class="mt-6 px-6 md:px-12 flex justify-between">

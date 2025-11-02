@@ -11,7 +11,7 @@
           <Icon name="uil:shop" size="50" class="text-red-400" />
 
           <span
-            class="self-center inline-flex text-3xl text-orange-600 font-bold whitespace-nowrap dark:text-white"
+            class="hidden md:inline-flex self-center md:text-3xl text-orange-600 font-bold whitespace-nowrap dark:text-white"
             >Shopiverse</span
           >
         </NuxtLink>

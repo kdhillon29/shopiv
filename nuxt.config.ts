@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
   ],
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false,
+    },
+  },
   runtimeConfig: {
     stripeSK: process.env.STRIPE_SK_KEY,
     public: {

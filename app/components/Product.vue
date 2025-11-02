@@ -9,7 +9,7 @@
     >
       <NuxtLink :to="`product-${product.id}`">
         <NuxtPicture
-          class="aspect-square object-contain h-1/2 shadow-sm rounded-t-lg"
+          class="w-full aspect-[3/2] object-cover shadow-sm rounded-t-lg"
           :src="`${product.image}`"
           alt="product image"
         />

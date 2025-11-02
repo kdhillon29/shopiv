@@ -1,64 +1,77 @@
 <template>
   <div>
     <div
-      class="relative md:mt-12 w-full flex flex-col md:flex-row justify-between items-center gap-6 overflow-x-auto space-y-6 px-3 md:px-6"
+      class="relative md:mt-6 w-full flex flex-col md:flex-row justify-center items-center gap-1 space-y-6 px-1 md:px-6"
     >
       <table
-        class="w-1/2 flex-1 mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 py-6"
+        class="w-1/2 md:w-1/3 flex-1 mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 py-6"
       >
         <thead
-          class="text-xs mx-auto text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          class="text-xs mx-auto text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
         >
           <tr>
-            <th scope="col" class="px-6 py-3">Product name</th>
-            <th scope="col" class="px-6 py-3">Price</th>
-            <th scope="col" class="px-6 py-3">Category</th>
-            <th scope="col" class="px-6 py-3">Image</th>
-            <th scope="col" class="px-6 py-3">quantity</th>
-            <th scope="col" class="px-6 py-3">Item Total</th>
-            <th scope="col" class="px-6 py-3">Actions</th>
+            <th scope="col" class="px-1 py-2">Product</th>
+            <!-- <th scope="col" class="px-1 py-2">Category</th> -->
+            <th scope="col" class="px-1 py-2">Price</th>
+
+            <th scope="col" class="px-3 py-2">quantity</th>
+            <th scope="col" class="px-1 py-2">Item Total</th>
+            <th scope="col" class="px-1 py-2">Actions</th>
           </tr>
         </thead>
         <tbody v-if="cart.length" v-for="product in cart">
           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th
               scope="row"
-              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="px-1 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
               <NuxtLink :to="`product-${product.item.id}`">
-                {{ product.item.title.substring(0, 20) }}
+                <!-- <td class="px-1 py-4"> -->
+                <NuxtPicture
+                  width="50px"
+                  :src="product.item.image"
+                  alt="product image"
+                />
+                {{ product.item.title.substring(0, 12) }}
+                <!-- </td> -->
               </NuxtLink>
             </th>
-            <td class="px-6 py-4">
+
+            <td class="px-1 py-4">
               {{ product.item.price }}
             </td>
-            <td class="px-6 py-4">
-              {{ product.item.category }}
-            </td>
-            <td class="px-6 py-4">
-              <img width="50px" :src="product.item.image" alt="product image" />
-            </td>
-            <td class="px-6 py-4">
-              <div class="flex justify-between">
-                {{ product.quantity }}
-                <Icon
-                  @click="updateQuantity(product, 'minus')"
-                  name="uil:minus"
-                  size="20"
-                  class="text-red-600 font-bold ring-2 ring-purple-300 p-2 dark:bg-gray-600 rounded-full"
-                />
-                <Icon
-                  @click="updateQuantity(product)"
-                  name="uil:plus"
-                  size="20"
-                  class="text-green-600 font-bold ring-2 ring-gray-800 dark:bg-gray-600 rounded-full"
-                />
+
+            <td class="px-1 py-4">
+              <div class="flex gap-3 justify-center items-center">
+                <Strong class="text-xl font-bold">{{
+                  product.quantity
+                }}</Strong>
+                <div class="flex justify-between gap-2">
+                  <strong class="bg-zinc-200 dark:bg-zinc-900 rounded-full p-1">
+                    <Icon
+                      @click="updateQuantity(product, 'minus')"
+                      name="uil:minus"
+                      size="25"
+                      class="text-red-600 font-bold"
+                    />
+                  </strong>
+                  <strong
+                    class="bg-zinc-200 dark:bg-zinc-700 font-bold rounded-full p-1"
+                  >
+                    <Icon
+                      @click="updateQuantity(product)"
+                      name="uil:plus"
+                      size="25"
+                      class="text-green-600"
+                    />
+                  </strong>
+                </div>
               </div>
             </td>
-            <td class="px-6 py-4 font-semibold dark:text-white">
+            <td class="px-1 py-4 font-semibold dark:text-white">
               ${{ (product.quantity * product.item.price).toFixed(2) }}
             </td>
-            <td class="px-6 py-4">
+            <td class="px-1 py-4">
               <button @click="removeFromCart(product)">
                 <Icon name="fa:remove" size="25" color="red" />
               </button>
@@ -74,7 +87,7 @@
 
       <div
         v-if="cart.length"
-        class="w-1/2 shadow-md max-w-sm px-6 py-3 bg-white border border-gray-200 rounded-lg dark:bg-gray-600 dark:border-gray-700"
+        class="w-full md:w-1/3 shadow-md max-w-sm px-6 py-3 bg-white border border-gray-200 rounded-lg dark:bg-gray-600 dark:border-gray-700"
       >
         <div class="flex justify-between">
           <h5

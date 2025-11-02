@@ -2,12 +2,12 @@
   <button
     id="theme-toggle"
     type="button"
-    class="text-gray-500 w-16 flex justify-center items-center rounded-full p-1 bg-white dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 text-md"
+    class="text-gray-500 w-16 flex justify-center items-center rounded-full p-2 bg-slate-50 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 text-md"
     @click="toggleTheme"
   >
     <svg
       id="theme-toggle-dark-icon"
-      class="hidden w-5 h-5"
+      class="hidden w-6 h-6"
       fill="currentColor"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"

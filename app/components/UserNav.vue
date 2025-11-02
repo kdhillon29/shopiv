@@ -98,7 +98,7 @@
             <li>
               <NuxtLink
                 to="/search"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                class="block py-2 px-3 dark:text-white rounded"
                 aria-current="page"
                 >Search</NuxtLink
               >
@@ -106,14 +106,14 @@
             <li>
               <NuxtLink
                 to="/sell"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block py-2 px-3 dark:text-white rounded"
                 >Sell on Shopiverse</NuxtLink
               >
             </li>
             <li>
               <NuxtLink
                 to="/about"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block py-2 px-3 dark:text-white rounded"
                 >About</NuxtLink
               >
             </li>
@@ -124,7 +124,7 @@
               >
                 <Icon
                   name="uil:shopping-cart"
-                  class="text-green-600 dark:text-white"
+                  class="text-gray-700 dark:text-white"
                   size="40"
                 />
                 <span

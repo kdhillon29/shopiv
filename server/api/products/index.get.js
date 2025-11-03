@@ -1,6 +1,6 @@
 
 import { db } from "../../db/index"
-// import { products } from "../../db/schema";
+import { products } from "../../db/schema";
 
 export default defineEventHandler(async () => {
     console.log("Fetching products from database...");

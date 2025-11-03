@@ -50,11 +50,11 @@
     </p>
     <br /><br />
 
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
       <div v-if="searchResults && searchInput" v-for="product in searchResults">
         <Product :product="product" />
       </div>
-      <div v-if="pending" v-for="loader in Array(1, 2, 3, 4, 5)">
+      <div v-if="pending" v-for="loader in Array(1, 2, 3, 4)">
         <ProductLoader key="loader" />
       </div>
       <p
@@ -82,6 +82,7 @@ const { data, error, pending, execute } = await useFetch(
     query: {
       input: searchInput,
     },
+    server: false,
     watch: [searchInput],
     transform: (data) => {
       searchResults.value = data;

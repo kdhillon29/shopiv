@@ -99,25 +99,46 @@
           id="navbar-user"
         >
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="flex flex-col items-center justify-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
-            <li>
+            <li
+              data-collapse-toggle="navbar-user"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
               <NuxtLink
                 to="/search"
-                class="block py-2 px-3 text-white bg-rose-700 rounded md:bg-transparent md:text-rose-700 md:p-0 md:dark:text-orange-500"
+                class="block py-2 px-3 dark:text-white rounded md:bg-transparent"
                 aria-current="page"
+                data-collapse-toggle="navbar-user"
+                aria-controls="navbar-user"
+                aria-expanded="false"
                 >Search</NuxtLink
               >
             </li>
-            <li>
+            <li
+              data-collapse-toggle="navbar-user"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
               <NuxtLink
                 to="/sell"
+                data-collapse-toggle="navbar-user"
+                aria-controls="navbar-user"
+                aria-expanded="false"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >Sell on Shopiverse</NuxtLink
-              >
+                >Sell
+              </NuxtLink>
             </li>
-            <li>
+            <li
+              data-collapse-toggle="navbar-user"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
               <NuxtLink
+                data-collapse-toggle="navbar-user"
+                aria-controls="navbar-user"
+                aria-expanded="false"
                 to="/about"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >About</NuxtLink

@@ -39,7 +39,7 @@
       </div>
       <button
         @click.prevent="execute"
-        class="bg-orange-600 dark:bg-green-700 text-white flex justify-center items-center gap-2 ml-3 p-2 px-4 rounded-full"
+        class="hidden md:inline-flex bg-rose-600 dark:bg-green-700 text-white justify-center items-center gap-2 ml-3 p-2 px-4 rounded-full"
       >
         <Icon name="uil:search" size="16" class="text-white" />
         Search

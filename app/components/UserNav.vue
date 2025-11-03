@@ -14,6 +14,23 @@
             >Shopiverse</span
           >
         </NuxtLink>
+        <div class="md:hidden">
+          <NuxtLink
+            to="/cart"
+            class="block relative py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >
+            <Icon
+              name="uil:shopping-cart"
+              class="text-gray-700 dark:text-white"
+              size="40"
+            />
+            <span
+              v-if="cart.length"
+              class="absolute top-[-12px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-[-10px]"
+              >{{ cart.length }}</span
+            >
+          </NuxtLink>
+        </div>
         <div
           class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
         >

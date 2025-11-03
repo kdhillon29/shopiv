@@ -8,7 +8,7 @@
     </div>
   </div>
   <div
-    class="w-full grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-2 py-4 md:px-6"
+    class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-2 py-4 md:px-6"
   >
     <div v-if="products" v-for="product in products">
       <Product :product="product" />

@@ -17,9 +17,14 @@
 </template>
 
 <script setup>
+const products = useState(() => {});
 //don't use await on client fetch
-const { data: products, pending } = useFetch("/api/products", {
-  server: false,
+const { data, pending } = useFetch("/api/products", {
+  // server: false,
+  lazy: true,
+  transform: (data) => {
+    products.value = data;
+  },
 });
 console.log("products fetched:", products);
 </script>

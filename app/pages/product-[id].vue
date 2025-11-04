@@ -1,7 +1,9 @@
 <template>
   <div class="w-full">
-    <Loading v-if="pending" />
-    <SingleProduct v-else :product="product" />
+    <!-- <Loading v-if="pending" /> -->
+    <!-- <ProductLoader v-if="pending" /> -->
+    <SingleProduct v-if="product" :product="product" />
+    <ProductLoader v-else />
   </div>
 </template>
 

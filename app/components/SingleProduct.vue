@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl w-full flex justify-center mx-auto my-1 p-6">
+  <div class="max-w-5xl w-full flex justify-center mx-auto my-1 p-6">
     <div
       class="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl"
     >

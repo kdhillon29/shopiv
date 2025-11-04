@@ -1,5 +1,5 @@
 
-import { db } from "../../db/index"
+import { db } from "../../utils/drizzle"
 import { products } from "../../db/schema";
 
 export default defineEventHandler(async () => {

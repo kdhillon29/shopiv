@@ -14,19 +14,20 @@
             >Shopiverse</span
           >
         </NuxtLink>
-        <div class="md:hidden">
+        <div class="md:hidden flex justify-center items-center gap-3">
+          <div class="ml-3 md:ml-8"><ThemeToggle /></div>
           <NuxtLink
             to="/cart"
-            class="block relative py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            class="block relative py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
           >
             <Icon
               name="uil:shopping-cart"
-              class="text-gray-700 dark:text-white"
-              size="40"
+              class="text-gray-600 dark:text-green-600"
+              size="30"
             />
             <span
               v-if="cart.length"
-              class="absolute top-[-12px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-[-10px]"
+              class="absolute top-[-2px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-0"
               >{{ cart.length }}</span
             >
           </NuxtLink>
@@ -86,6 +87,7 @@
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-user"
             aria-expanded="false"
+            role="button"
           >
             <span class="sr-only">Open main menu</span>
             <svg
@@ -105,14 +107,22 @@
             </svg>
           </button>
         </div>
-        <div
+        <nav
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-user"
+          data-collapse-toggle="navbar-user"
+          aria-controls="navbar-user"
+          aria-expanded="false"
         >
           <ul
+            role="menu"
             class="flex flex-col gap-3 md:gap-6 justify-center items-center font-medium p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-slate-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            data-collapse-toggle="navbar-user"
+            aria-controls="navbar-user"
+            aria-expanded="false"
           >
             <li
+              role="menuitem"
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
@@ -125,6 +135,7 @@
               >
             </li>
             <li
+              role="menuitem"
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
@@ -136,40 +147,43 @@
               >
             </li>
             <li
+              role="menuitem"
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
             >
               <NuxtLink
+                aria-controls="navbar-user"
+                aria-expanded="false"
                 to="/about"
                 class="block py-2 px-3 dark:text-white rounded"
                 >About</NuxtLink
               >
             </li>
             <li
+              role="menuitem"
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
             >
               <NuxtLink
                 to="/cart"
-                class="block relative md:py-2 md:px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block relative md:py-2 md:px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rose-700"
               >
                 <Icon
                   name="uil:shopping-cart"
-                  class="text-gray-700 dark:text-white"
+                  class="text-gray-700 text-sm md:text-xl dark:text-green-600"
                   size="40"
                 />
                 <span
                   v-if="cart.length"
-                  class="absolute top-0 md:top-[-2px] md:px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-2 md:right-[-10px]"
+                  class="absolute top-[-5px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-0"
                   >{{ cart.length }}</span
                 >
               </NuxtLink>
             </li>
           </ul>
-          <div class="ml-3 md:ml-8"><ThemeToggle /></div>
-        </div>
+        </nav>
       </div>
     </nav>
   </div>

@@ -78,11 +78,12 @@ const noProduct = computed(() => {
 const { data, error, pending, execute } = await useFetch(
   "/api/products/search/query",
   {
-    //   immediate: false,
+    immediate: false,
     query: {
       input: searchInput,
     },
     server: false,
+    lazy: true,
     watch: [searchInput],
     transform: (data) => {
       searchResults.value = data;

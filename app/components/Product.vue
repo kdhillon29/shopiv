@@ -31,9 +31,7 @@
         </NuxtLink>
         <div class="flex items-center my-3 dark:text-gray-400">
           <h5 class="tex-xs">Rating:</h5>
-          <span class="text-xs font-semibold px-2.5 rounded">{{
-            getRandomRating()
-          }}</span>
+          <span class="text-xs font-semibold px-2.5 rounded">{{ rating }}</span>
         </div>
         <div class="flex items-center justify-start gap-2 my-2">
           <strong class="text-gray-600 dark:text-gray-200">Price:</strong>
@@ -66,6 +64,7 @@ defineProps(["product", "isSingle"]);
 
 const user = useSupabaseUser();
 const cart = useCart();
+const rating = ref(5);
 const alreadyInCart = (cartState, productToCheck) => {
   return cartState.some((productInCart) => {
     return productInCart.id === productToCheck.id;
@@ -75,6 +74,9 @@ const alreadyInCart = (cartState, productToCheck) => {
 const getRandomRating = () => {
   return (Math.floor(Math.random() * 5) + 1).toFixed(1);
 };
+onMounted(() => {
+  rating.value = getRandomRating();
+});
 
 const addToCart = (product) => {
   console.log("Adding to cart:", product);

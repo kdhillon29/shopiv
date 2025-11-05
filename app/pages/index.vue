@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="pending"
-    class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-2"
+    class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-4 px-2"
   >
     <div v-for="loader in Array(1, 2, 3, 4, 5, 6, 7, 8)">
       <ProductLoader :key="loader" />
@@ -17,14 +17,14 @@
 </template>
 
 <script setup>
-const products = useState(() => {});
+// const products = useState(() => {});
 //don't use await on client fetch
-const { data, pending } = useFetch("/api/products", {
+const { data: products, pending } = useFetch("/api/products", {
   // server: false,
   lazy: true,
-  transform: (data) => {
-    products.value = data;
-  },
+  // transform: (data) => {
+  //   products.value = data;
+  // },
 });
 console.log("products fetched:", products);
 </script>

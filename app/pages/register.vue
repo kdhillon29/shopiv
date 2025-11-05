@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <form @submit.prevent="signUp" class="py-12 max-w-md mx-auto">
+  <div class="py-12 w-full flex flex-col justify-start items-center">
+    <h1 class="text-center font-semibold text-rose-500 dark:text-gray-200">
+      Register On ShopiVerse
+    </h1>
+    <form
+      @submit.prevent="signUp"
+      class="w-full flex-1 py-6 px-4 max-w-sm mx-auto"
+    >
       <div class="relative z-0 w-full mb-5 group">
         <input
           v-model="email"
@@ -71,7 +77,7 @@
       <div class="grid md:grid-cols-2 md:gap-6"></div>
       <button
         type="submit"
-        class="text-white bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-ring-800"
+        class="text-white mt-6 bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-ring-800"
         :class="{ isPending: isPending }"
       >
         {{ pending ? "Submitting..." : "Submit" }}

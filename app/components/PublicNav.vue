@@ -97,14 +97,17 @@
         <div
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-user"
+          :class="{ hideMenu: hideMenu }"
         >
           <ul
             class="flex flex-col items-center justify-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            @click="handleMenuClick"
           >
             <li
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
+              @click="handleMenuClick"
             >
               <NuxtLink
                 to="/search"
@@ -120,6 +123,7 @@
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
+              @click="handleMenuClick"
             >
               <NuxtLink
                 to="/sell"
@@ -134,6 +138,7 @@
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
               aria-expanded="false"
+              @click="handleMenuClick"
             >
               <NuxtLink
                 data-collapse-toggle="navbar-user"
@@ -155,6 +160,12 @@
 const user = useSupabaseUser();
 console.log("user in UserNav:", user.value);
 import { initFlowbite } from "flowbite";
+const hideMenu = ref();
+const handleMenuClick = () => {
+  console.log("menu clicked");
+  hideMenu.value = true;
+  setTimeout(() => (hideMenu.value = false), 500);
+};
 
 // initialize components based on data attribute selectors
 onMounted(() => {

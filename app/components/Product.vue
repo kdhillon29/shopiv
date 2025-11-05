@@ -1,17 +1,14 @@
 <template>
   <div :id="`product${product.id}`">
     <div
-      class="relative flex flex-col gap-6 px-1 h-[480px] max-w-md bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+      class="relative flex flex-col gap-6 h-[480px] max-w-md bg-slate-100 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
     >
-      <div class="w-full h-[50%] text-center">
+      <div class="w-full h-[40%]">
         <NuxtLink :to="`/product-${product.id}`">
           <NuxtPicture
             format="avif,webp"
-            :imgAttrs="{
-              class: imgClass,
-            }"
+            class="w-full object-contain shadow-md rounded-t-lg"
             :src="`${product.image}`"
-            fill="true"
             alt="product image"
           />
         </NuxtLink>
@@ -93,6 +90,6 @@ const addToCart = (product) => {
 
 <style scoped>
 .imgClass {
-  @apply w-full  object-cover border-b-2 border-amber-200 rounded-t-lg;
+  @apply w-full object-contain  rounded-t-lg;
 }
 </style>

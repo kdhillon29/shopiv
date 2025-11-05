@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-slate-200 flex flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
+    class="bg-slate-200 flex mt-6 flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
   >
     <div
       class="w-full md:w-1/2 flex flex-col items-center justify-center md:flex-row gap-3 p-2 my-2 md:my-6"
@@ -29,7 +29,7 @@
       <button
         @click="googleLogin"
         type="button"
-        class="w-full md:w-1/2 px-6 text-white py-3 bg-amber-600 hover:bg-amber-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-green-600/90 focus:ring-4 focus:outline-none focus:ring-orange-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-orange-500/55 me-2 mb-2"
+        class="w-full md:w-1/2 px-6 text-white py-3 bg-amber-600 hover:bg-amber-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-rose-600/90 focus:ring-4 focus:outline-none focus:ring-ring-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-rose-500/55 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"

@@ -109,19 +109,23 @@
         </div>
         <nav
           class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          :class="{ hideMenu: hideMenu }"
           id="navbar-user"
         >
           <ul
             role="menu"
             class="flex flex-col gap-3 md:gap-6 justify-center items-center font-medium p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-slate-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            @click="handleMenuClick"
           >
             <li
               role="menuitem"
               data-collapse-toggle="navbar-user"
               aria-controls="navbar-user"
+              @click="handleMenuClick"
             >
               <NuxtLink
                 to="/search"
+                @click="handleMenuClick()"
                 class="block py-2 px-3 dark:text-white rounded"
                 aria-current="page"
                 >Search</NuxtLink
@@ -181,6 +185,12 @@
 <script setup>
 const user = useSupabaseUser();
 const cart = useCart();
+const hideMenu = ref(false);
+const handleMenuClick = () => {
+  console.log("menu clicked");
+  hideMenu.value = true;
+  setTimeout(() => (hideMenu.value = false), 500);
+};
 
 console.log("user in UserNav:", user);
 import { initFlowbite } from "flowbite";
@@ -190,3 +200,8 @@ onMounted(() => {
   initFlowbite();
 });
 </script>
+<style>
+.hideMenu {
+  @apply hidden;
+}
+</style>

@@ -44,7 +44,7 @@
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Shop
         </h3>
-        <ul class="space-y-2 text-sm">
+        <ul class="space-y-2 text-sm grid grid-cols-2 md:grid-cols-1">
           <li>
             <a
               href="#"
@@ -81,7 +81,7 @@
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Support
         </h3>
-        <ul class="space-y-2 text-sm">
+        <ul class="space-y-2 text-sm grid grid-cols-2 md:grid-cols-1">
           <li>
             <a
               href="#"
@@ -127,7 +127,7 @@
               v-model="email"
               type="email"
               placeholder="Enter your email"
-              class="w-full px-3 py-2 text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 rounded-l focus:outline-none focus:ring-2 focus:ring-rose-500"
+              class="w-full flex-1 px-1 py-2 text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 rounded-l focus:outline-none focus:ring-2 focus:ring-rose-500"
               required
             />
             <button

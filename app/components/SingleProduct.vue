@@ -7,10 +7,10 @@
         <div
           class="absolute inset-0 bg-gradient-to-bl from-rose-600 to-indigo-600 opacity-75"
         ></div>
-        <NuxtPicture
+        <NuxtImg
           :src="`${product.image}`"
           alt="Product Image"
-          class="w-full h-64 object-cover object-center relative z-10"
+          class="w-[50%] aspect-[3/2] md:max-h-[350px] object-cover object-center relative z-10"
         />
         <div
           class="absolute top-4 right-4 bg-gray-100 text-xs font-bold px-3 py-2 rounded-full z-20 transform rotate-12"
@@ -26,7 +26,7 @@
         <p
           class="text-gray-600 dark:text-gray-200 dark:bg-gray-800 tex-sm md:text-md mb-4 tracking-wider leading-8 py-2"
         >
-          ${{ product.description }}
+          {{ product.description }}
         </p>
         <div class="flex items-center justify-between mb-4">
           <span class="text-2xl font-bold text-indigo-600"

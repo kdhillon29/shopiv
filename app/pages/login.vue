@@ -1,14 +1,12 @@
 <template>
   <div
-    class="bg-slate-200 flex mt-6 flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
+    class="bg-slate-100 border-2 flex flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
   >
-    <div
-      class="w-full md:w-1/2 flex flex-col items-center justify-center md:flex-row gap-3 p-2 my-2 md:my-6"
-    >
+    <div class="w-full md:w-[50%] px-6 md:px-12 flex flex-col gap-3 md:gap-6">
       <button
         @click="githubLogin"
         type="button"
-        class="w-full md:w-1/2 px-6 text-white bg-slate-500 hover:bg-slate-400/90 dark:bg-teal-800 py-3 dark:hover:bg-teal-750/90 focus:ring-4 focus:outline-none focus:ring-green-400/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-green-600/30 me-2 mb-2"
+        class="w-full px-6 text-white bg-slate-500 hover:bg-slate-400/90 dark:bg-teal-800 py-3 dark:hover:bg-teal-750/90 focus:ring-4 focus:outline-none focus:ring-green-400/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-green-600/30 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"
@@ -29,7 +27,7 @@
       <button
         @click="googleLogin"
         type="button"
-        class="w-full md:w-1/2 px-6 text-white py-3 bg-amber-600 hover:bg-amber-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-rose-600/90 focus:ring-4 focus:outline-none focus:ring-ring-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-rose-500/55 me-2 mb-2"
+        class="w-full px-6 text-white py-3 bg-rose-600 hover:bg-rose-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-rose-600/90 focus:ring-4 focus:outline-none focus:ring-ring-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-rose-500/55 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"
@@ -47,6 +45,7 @@
         Sign in with Google
       </button>
     </div>
+
     <div
       class="w-full px-2 md:w-[40%] flex flex-col justify-start items-center"
     >
@@ -82,7 +81,7 @@
         </div>
         <button
           type="submit"
-          class="w-full px-8 md:px-16 py-4 mt-6 mx-auto text-white bg-slate-500 hover:bg-slate-400 hover:bg-orange-500/90 focus:ring-4 focus:outline-none focus:ring-orange-400 font-medium rounded-lg text-sm sm:w-auto text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          class="w-full px-3 md:px-6 py-3 mt-6 text-white bg-rose-500 hover:bg-rose-600 hover:bg-rose-500/90 focus:ring-4 focus:outline-none focus:ring-rose-400 font-medium rounded-lg text-sm text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
         >
           {{ pending ? "Logging In ..." : "Log In" }}
         </button>

@@ -40,11 +40,13 @@
       </div>
 
       <!-- Shop Links -->
-      <div>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+      <div class="mt-10 md:mt-0">
+        <h3
+          class="text-lg text-center md:text-left font-semibold text-gray-900 dark:text-white mb-3"
+        >
           Shop
         </h3>
-        <ul class="space-y-2 text-sm grid grid-cols-2 md:grid-cols-1">
+        <ul class="space-y-1 text-sm grid grid-cols-2 md:grid-cols-1">
           <li>
             <a
               href="#"
@@ -81,7 +83,9 @@
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Support
         </h3>
-        <ul class="space-y-2 text-sm grid grid-cols-2 md:grid-cols-1">
+        <ul
+          class="space-y-1 text-xs md:text-sm grid grid-cols-2 md:grid-cols-1"
+        >
           <li>
             <a
               href="#"
@@ -122,7 +126,7 @@
           Subscribe to get the latest deals and updates.
         </p>
         <form @submit.prevent="subscribe">
-          <div class="flex">
+          <div class="flex flex-col gap-2 md:gap-0 md:flex-row">
             <input
               v-model="email"
               type="email"

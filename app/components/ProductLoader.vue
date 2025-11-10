@@ -1,7 +1,7 @@
 <template>
   <div class="w-42 p-2 rounded border border-gray-200">
     <SkeletonLoader
-      class="mb-4 h-48 flex justify-center items-center text-gray-400 dark:text-gray-700"
+      class="mb-4 h-48 flex justify-center items-center text-gray-500 dark:bg-gray-800"
     >
       <!-- Image -->
     </SkeletonLoader>

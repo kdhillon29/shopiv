@@ -6,7 +6,7 @@
       <button
         @click="githubLogin"
         type="button"
-        class="w-full px-6 text-white bg-slate-500 hover:bg-slate-400/90 dark:bg-teal-800 py-3 dark:hover:bg-teal-750/90 focus:ring-4 focus:outline-none focus:ring-green-400/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-green-600/30 me-2 mb-2"
+        class="w-full px-6 text-white bg-slate-400 hover:bg-slate-400/90 dark:bg-orange-800 py-3 dark:hover:bg-orange-700/90 focus:ring-4 focus:outline-none focus:ring-green-400/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-orange-500 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"
@@ -27,7 +27,7 @@
       <button
         @click="googleLogin"
         type="button"
-        class="w-full px-6 text-white py-3 bg-rose-600 hover:bg-rose-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-rose-600/90 focus:ring-4 focus:outline-none focus:ring-ring-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-rose-500/55 me-2 mb-2"
+        class="w-full px-6 text-white py-3 bg-rose-600 hover:bg-rose-400/90 transition-all duration-75 ease-linear dark:bg-green-800 dark:hover:bg-green-600/90 focus:ring-4 focus:outline-none focus:ring-rose-700/50 font-medium rounded-lg text-sm inline-flex items-center dark:focus:ring-green-500/55 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"

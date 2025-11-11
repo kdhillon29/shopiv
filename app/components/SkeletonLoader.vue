@@ -49,7 +49,7 @@ const props = defineProps({
   },
   bgClass: {
     type: String,
-    default: "bg-gray-300",
+    default: "bg-gray-400",
   },
   cssClass: {
     type: String,

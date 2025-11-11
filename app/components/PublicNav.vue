@@ -158,7 +158,7 @@
 
 <script setup>
 const user = useSupabaseUser();
-console.log("user in UserNav:", user.value);
+console.log("user in publicNav:", user.value);
 import { initFlowbite } from "flowbite";
 const hideMenu = ref();
 const handleMenuClick = () => {

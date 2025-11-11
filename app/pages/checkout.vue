@@ -75,7 +75,7 @@ const handleSubmit = async () => {
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "https://shopiversee.netlify.app/payment-success",
+      return_url: "https://shopiv.vercel.app/payment-success",
     },
   });
 

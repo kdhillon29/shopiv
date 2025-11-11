@@ -35,7 +35,9 @@
             rating
           }}</span>
         </div> -->
-        <div class="mt-3 w-full flex justify-between items-center">
+        <div
+          class="mt-3 w-full flex max-sm:flex-col-reverse justify-between items-center"
+        >
           <div class="flex items-center justify-start gap-2 my-2">
             <strong class="text-gray-600 dark:text-gray-200">Price:</strong>
             <span

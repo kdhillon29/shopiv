@@ -179,8 +179,10 @@ const updateQuantity = (product, type) => {
 };
 
 const removeFromCart = (product) => {
-  const productIndex = cart.value.findIndex((item) => item.id === product.id);
-  cart.value.splice(productIndex, 1);
+  const productIndex = cart.value.findIndex(
+    (item) => item.id === product.item.id
+  );
+  cart.value.splice(productIndex);
   localStorage.setItem("cart", JSON.stringify(cart.value));
 };
 

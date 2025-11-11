@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col min-h-screen bg-white dark:bg-gray-800">
     <!-- <ThemeToggle /> -->
-    <main class="">
-      <Header />
+    <Header />
+    <main class="min-h-screen">
       <slot />
-      <Footer />
     </main>
+    <Footer />
   </div>
 </template>
 

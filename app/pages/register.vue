@@ -137,7 +137,7 @@ const signUp = async () => {
         full_name: userName.value,
         address: address.value,
       },
-      emailRedirectTo: "https://shopiv.vercel.app",
+      emailRedirectTo: "https://shopiv.vercel.app/",
     },
   });
 

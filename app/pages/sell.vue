@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1>Add Product to Sell on ShopiVerse</h1>
+    <h1
+      class="mt-6 text-xl md:text-3xl w-1/2 text-center mx-auto border-b-2 border-green-400 font-bold dark:text-white"
+    >
+      Add Product to Sell on ShopiVerse
+    </h1>
     <form
       @submit.prevent="createProduct"
       class="flex flex-col gap-3 max-w-lg mx-auto mt-2 py-2 md:py-6 px-3 md:px-6"
@@ -62,10 +66,10 @@
         placeholder="Write your product description here..."
       ></textarea>
 
-      <div>
-        <p class=" w-full flex justify-around mb-1">
+      <div class="mt-3">
+        <div class="w-full flex justify-start mb-1">
           <label
-            class="inline text-xs font-medium text-gray-900 dark:text-white"
+            class="inline-flex w-32 text-xs font-medium text-gray-900 dark:text-white"
             for="user_avatar"
             >Upload Image:</label
           >
@@ -74,7 +78,7 @@
               class="w-64 h-1 my-2 bg-gray-200 border-0 rounded dark:bg-gray-400"
             />
             <div
-              class="absolute flex px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-400"
+              class="absolute flex px-4 -translate-x-1/4 bg-white left-1/2 dark:bg-gray-900"
             >
               <svg
                 class="w-2 h-2 text-gray-700 dark:text-gray-300 rotate-180"
@@ -103,10 +107,10 @@
               </svg>
             </div>
           </div>
-        </p>
+        </div>
         <!-- <br /> -->
         <!-- <br /> -->
-        <div class=" max-sm:mt-3 flex gap-1">
+        <div class="flex gap-1">
           <input
             @change="handleFileChange"
             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"

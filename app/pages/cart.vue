@@ -46,23 +46,25 @@
                 <Strong class="text-xl font-bold">{{
                   product.quantity
                 }}</Strong>
-                <div class="flex justify-between gap-2">
-                  <strong class="bg-zinc-200 dark:bg-zinc-900 rounded-full p-1">
+                <div class="flex justify-between items-center gap-2">
+                  <strong
+                    class="flex justify-center items-center bg-zinc-300 dark:bg-zinc-900 rounded-full p-0.5"
+                  >
                     <Icon
                       @click="updateQuantity(product, 'minus')"
                       name="uil:minus"
-                      size="25"
+                      size="20"
                       class="text-red-600 font-bold"
                     />
                   </strong>
                   <strong
-                    class="bg-zinc-200 dark:bg-zinc-700 font-bold rounded-full p-1"
+                    class="flex justify-center items-center bg-zinc-300 dark:bg-zinc-700 font-bold rounded-full p-0.5"
                   >
                     <Icon
                       @click="updateQuantity(product)"
                       name="uil:plus"
-                      size="25"
-                      class="text-green-600"
+                      size="20"
+                      class="text-green-600 font-bold"
                     />
                   </strong>
                 </div>
@@ -73,7 +75,7 @@
             </td>
             <td class="px-1 py-4">
               <button @click="removeFromCart(product)">
-                <Icon name="fa:remove" size="25" color="red" />
+                <Icon name="fa:remove" size="20" color="red" />
               </button>
             </td>
           </tr>

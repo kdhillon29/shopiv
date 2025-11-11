@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Add Product to Sell on ShopiVerse</h1>
     <form
       @submit.prevent="createProduct"
       class="flex flex-col gap-3 max-w-lg mx-auto mt-2 py-2 md:py-6 px-3 md:px-6"
@@ -62,7 +63,7 @@
       ></textarea>
 
       <div>
-        <p class=" w-fullflex justify-around mb-1">
+        <p class=" w-full flex justify-around mb-1">
           <label
             class="inline text-xs font-medium text-gray-900 dark:text-white"
             for="user_avatar"
@@ -70,10 +71,10 @@
           >
           <div class="inline-flex items-center justify-center w-full">
             <hr
-              class="w-64 h-1 my-2 bg-gray-200 border-0 rounded dark:bg-gray-700"
+              class="w-64 h-1 my-2 bg-gray-200 border-0 rounded dark:bg-gray-400"
             />
             <div
-              class="absolute flex px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900"
+              class="absolute flex px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-400"
             >
               <svg
                 class="w-2 h-2 text-gray-700 dark:text-gray-300 rotate-180"
@@ -105,7 +106,7 @@
         </p>
         <!-- <br /> -->
         <!-- <br /> -->
-        <div class="flex gap-1">
+        <div class=" max-sm:mt-3 flex gap-1">
           <input
             @change="handleFileChange"
             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"

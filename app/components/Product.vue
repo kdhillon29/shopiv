@@ -74,7 +74,7 @@
 
         <button
           @click="addToCart(product)"
-          class="flex mt-3 md:mt-6 items-center justify-center gap-3 text-white bg-rose-600 dark:bg-green-600 hover:bg-orange-500 dark:hover:bg-green-500 mb-1 w-[90%] mx-auto px-2 py-3 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm"
+          class="flex mt-3 md:mt-6 items-center justify-center gap-3 text-white bg-rose-600 hover:bg-rose-500/90 dark:bg-green-600 dark:hover:bg-green-400/90 mb-1 w-[90%] mx-auto px-2 py-3 focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-sm"
         >
           <Icon name="uil:cart" size="20" class="text-white font-semibold" />
 

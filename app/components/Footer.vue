@@ -3,7 +3,7 @@
     class="bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-300 py-10 transition-colors duration-300"
   >
     <div
-      class="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"
+      class="max-w-7xl mx-auto px-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8"
     >
       <!-- Brand Section -->
       <div>
@@ -40,13 +40,13 @@
       </div>
 
       <!-- Shop Links -->
-      <div class="mt-10 md:mt-0">
+      <div class="mt-1 md:mt-0">
         <h3
           class="text-lg text-center md:text-left font-semibold text-gray-900 dark:text-white mb-3"
         >
           Shop
         </h3>
-        <ul class="space-y-1 text-sm grid grid-cols-2 md:grid-cols-1">
+        <ul class="space-y-1 text-xs grid grid-cols-2 md:grid-cols-1">
           <li>
             <a
               href="#"

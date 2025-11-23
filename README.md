@@ -1,75 +1,27 @@
-# Nuxt Minimal Starter
+# Shopiverse - Nuxt4 and Supabase based ecommerce web application to buy or sell things free online
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+<img width="1840" height="835" alt="image" src="https://github.com/user-attachments/assets/782fc825-ec3d-4913-817b-ff0423abd2f2" />
 
-Make sure to install dependencies:
+
+# Summary
+Ecommerce web Application to  buy and sell anything. Developed in Nuxt4,drizzle-orm and supabase
+
+## Key features
++ Dynamic Product rendering using Nuxt4 SSR render pages.
++ Authentication using supabase and google Auth
++ Add new Products using vue3 forms ,tailwindcss and Zod validation
++ Checkout feature using stripe checkout with nuxt server api.
+
+
+## Install Packages
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm i
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Start the app
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

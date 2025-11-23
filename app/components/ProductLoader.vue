@@ -1,5 +1,5 @@
 <template>
-  <div class="w-42 p-2 rounded border border-gray-200">
+  <div class="w-42 p-2 rounded">
     <SkeletonLoader
       class="mb-4 h-48 flex justify-center items-center text-gray-500 dark:bg-gray-800"
     >

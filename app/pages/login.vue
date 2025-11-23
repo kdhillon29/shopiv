@@ -1,12 +1,12 @@
 <template>
   <div
-    class="bg-slate-100 border-2 flex flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
+    class="bg-slate-100 flex flex-col justify-center items-center gap-3 md:gap-6 w-full px-2 py-3 md:py-6 md:px-6 shadow-md dark:bg-gray-800"
   >
     <div class="w-full md:w-[50%] px-6 md:px-12 flex flex-col gap-3 md:gap-6">
       <button
         @click="githubLogin"
         type="button"
-        class="w-full px-6 text-white bg-slate-400 hover:bg-slate-400/90 dark:bg-orange-800 py-3 dark:hover:bg-orange-700/90 focus:ring-4 focus:outline-none focus:ring-green-400/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-orange-500 me-2 mb-2"
+        class="w-full px-6 text-white bg-slate-400 hover:bg-slate-400/90 dark:bg-rose-800 py-3 dark:hover:bg-rose-700/90 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-red-500 me-2 mb-2"
       >
         <svg
           class="w-4 h-4 me-2"

@@ -21,6 +21,22 @@
         >
           <div class="flex justify-center items-center rounded-full mr-6">
             <ThemeToggle />
+            <!-- <NuxtLink
+              v-if="user"
+              to="/cart"
+              class="block relative py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <Icon
+                name="uil:shopping-cart"
+                class="text-gray-600 dark:text-green-600"
+                size="30"
+              />
+              <span
+                v-if="cart.length"
+                class="absolute top-[-2px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-0"
+                >{{ cart.length }}</span
+              >
+            </NuxtLink> -->
           </div>
 
           <button
@@ -52,7 +68,20 @@
                 >Welcome to Shopiverse</span
               >
             </div>
-            <ul class="py-2" aria-labelledby="user-menu-button">
+            <nav>
+              <ul>
+                <li v-for="item in menuItems" :key="item.label">
+                  <NuxtLink
+                    :to="item.to"
+                    @click="item.action && item.action()"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
+                    {{ item.label }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </nav>
+            <!-- <ul class="py-2" aria-labelledby="user-menu-button">
               <li>
                 <NuxtLink
                   to="/login"
@@ -67,8 +96,9 @@
                   >Register</NuxtLink
                 >
               </li>
-            </ul>
+            </ul> -->
           </div>
+
           <button
             data-collapse-toggle="navbar-user"
             type="button"
@@ -149,6 +179,28 @@
                 >About</NuxtLink
               >
             </li>
+            <li
+              v-if="user"
+              role="menuitem"
+              data-collapse-toggle="navbar-user"
+              aria-controls="navbar-user"
+            >
+              <NuxtLink
+                to="/cart"
+                class="block relative md:py-2 md:px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rose-700"
+              >
+                <Icon
+                  name="uil:shopping-cart"
+                  class="text-gray-700 text-sm md:text-xl dark:text-green-600"
+                  size="40"
+                />
+                <span
+                  v-if="cart.length"
+                  class="absolute top-[-5px] px-1.5 rounded-full text-white bg-rose-600 dark:bg-rose-400 right-0"
+                  >{{ cart.length }}</span
+                >
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </div>
@@ -157,8 +209,31 @@
 </template>
 
 <script setup>
+import { watch } from "vue";
 const user = useSupabaseUser();
+const cart = useCart();
+
+watch(
+  () => user.value,
+  (newUser) => {
+    console.log("user changed in publicNav:", newUser);
+  }
+);
 console.log("user in publicNav:", user.value);
+const menuItems = computed(() => {
+  if (user.value) {
+    return [
+      { label: "Account", to: "/Account" },
+      { label: "Sell", to: "/sell" },
+      { label: "Logout", to: "/logout" },
+    ];
+  }
+  return [
+    // { label: "Home", to: "/" },
+    { label: "Login", to: "/login" },
+    { label: "Register", to: "/register" },
+  ];
+});
 import { initFlowbite } from "flowbite";
 const hideMenu = ref();
 const handleMenuClick = () => {

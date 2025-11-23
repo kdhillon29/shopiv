@@ -1,7 +1,7 @@
 <template>
   <div>
-    <PublicNav v-if="!user" />
-    <UserNav v-else />
+    <PublicNav />
+    <!-- <UserNav v-else /> -->
   </div>
 </template>
 
